@@ -35,7 +35,7 @@ h2 {
 
 main {
     margin-top: 123px;
-    margin-bottom: 85px;
+    margin-bottom: 108px;
 }
 
 section {
@@ -73,16 +73,10 @@ h3 {
 .box__items {
     width: 172px;
     height: 216px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
     background: #FFFFFF;
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
-    border: none;
     margin-right: 16px;
-    padding: 0px;
 }
 
 .box__items img {
@@ -117,7 +111,6 @@ h3 {
     color: #A6A6A6;
     margin-left: 14px;
     margin-bottom: 5px;
-    text-align: start;
 }
 
 .item_price {
@@ -129,6 +122,7 @@ h3 {
     color: #000000;
     margin-left: 14px;
 }
+
 
 footer {
     width: 100%;
