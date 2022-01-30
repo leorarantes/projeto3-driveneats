@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #E5E5E5;
 }
@@ -8,6 +12,7 @@ header {
     background-color: #CF2B2B;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     position: fixed;
+    z-index: 1;
     top: 0px;
     margin-bottom: 4px;
 }
@@ -35,7 +40,7 @@ h2 {
 
 main {
     margin-top: 123px;
-    margin-bottom: 108px;
+    margin-bottom: 85px;
 }
 
 section {
@@ -62,24 +67,43 @@ h3 {
     overflow-x: scroll;
 }
 
-.items .box__items:first-child {
+.items div:first-child {
     margin-left: 19px;
 }
 
-.items .box__items:last-child {
+.items div:last-child {
     margin-right: 19px;
 }
 
-.box__items {
+.items div {
     width: 172px;
     height: 216px;
     background: #FFFFFF;
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
     margin-right: 16px;
+    position: relative;
 }
 
-.box__items img {
+.selected {
+    box-sizing: content-box;
+    border: 5px solid #32B72F;
+    margin-bottom: 5px;
+}
+
+.check {
+    font-size: 16px;
+    color: #32B72F;
+    position: absolute;
+    right: 8px;
+    bottom: 9px;
+}
+
+.hidden {
+    display: none;
+}
+
+.items img {
     width: 144px;
     height: 87px;
     border-radius: 4px;
@@ -135,7 +159,7 @@ footer {
     bottom: 0px;
 }
 
-.finish__button {
+.finish_button {
     width: 364px;
     height: 61px;
     display: flex;
@@ -146,11 +170,11 @@ footer {
     border-radius: 50px;
 }
 
-.finish__button div {
+.finish_button div {
     width: 200px;
 }
 
-.finish__button p {
+.finish_button p {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -161,9 +185,6 @@ footer {
     color: #FFFFFF;
 }
 
-.finish__button p:last-child {
-    letter-spacing: 0.014em;
+.finish_button__green {
+    background: #32B72F;
 }
-
-
-
