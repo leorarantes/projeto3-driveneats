@@ -7,6 +7,7 @@ let drinkPrice = 0;
 let dessert = "sobremesa";
 let dessertPrice = 0;
 let totalPrice = 0;
+let linkWhatsapp = "link";
 var myNamespace = {};
 
 myNamespace.round = function(number, precision) {
@@ -100,6 +101,8 @@ function finishOrder() {
 function confirmOrder() {
     personName = prompt("Digite seu nome: ");
     address = prompt("Digite seu endereço: ");
+
+    sendOrder();
 }
 
 function cancelOrder() {
@@ -107,4 +110,13 @@ function cancelOrder() {
     whiteBackground.classList.add("hidden");
     const boxConfirmation = document.querySelector(".box__confirmation");
     boxConfirmation.classList.add("hidden");
+}
+
+function sendOrder() {
+	var celphone = "5535991454417";
+
+    var text = "Olá, gostaria de fazer o pedido:\n- Prato: " + dishe + "\n- Bebida: " + drink + "\n- Sobremesa: " + dessert + "\nTotal: " + "R$ " + parseInt(totalPrice) + "," + (totalPrice*10-parseInt(totalPrice)*10) + "0\n\nNome: " + personName + "\nEndereço: " + address;
+    text = window.encodeURIComponent(text);
+
+    window.open("https://api.whatsapp.com/send?phone=" + celphone + "&text=" + text, "_blank");
 }
